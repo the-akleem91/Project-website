@@ -1,5 +1,6 @@
 import { Inter } from "next/font/google";
 import SideBar from "../components/SideBar";
+import NavBar from "../components/NavBar";
 
 const DashboardLayout = async ({ children }: { children: React.ReactNode }) => {
   return (
@@ -7,7 +8,11 @@ const DashboardLayout = async ({ children }: { children: React.ReactNode }) => {
       <div className="hidden h-full md:flex md:w-72 md:flex-col md:fixed md:inset-y-0 z-80 bg-gray-900">
         <SideBar />
       </div>
-      <main className="md:pl-72 h-full pb-10">{children}</main>
+
+      <main className="md:pl-72  pb-10 h-full">
+        <NavBar />
+        {children}
+      </main>
     </div>
   );
 };

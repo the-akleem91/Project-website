@@ -63,9 +63,8 @@ const routes = [
 
 export default function SideBar() {
   const pathname = usePathname();
-  console.log(pathname);
   return (
-    <div className="flex flex-col justify-center ">
+    <div className="md:flex flex-col  justify-center bg-gray-900 l">
       <h1 className="text-gray-100 text-2xl font-bold pt-6 mr-1 text-center">
         AI BUDDY
       </h1>
