@@ -1,4 +1,3 @@
-"use client";
 import { Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
@@ -9,7 +8,7 @@ export default function NavBar() {
   return (
     <div>
       <Sheet>
-        <SheetTrigger>
+        <SheetTrigger asChild>
           <Button variant="ghost" size="icon" className="md:hidden ml-6 mt-5">
             <Menu />
           </Button>
