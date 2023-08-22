@@ -24,8 +24,8 @@ export default function Conversation() {
   //   console.log(values);
   // };
   const [promt, stepromt] = useState("");
-  function onSubmit(e) {
-    e.prevent.default();
+  function onSubmit(e: any) {
+    e.preventDefault();
   }
   console.log(promt);
   return (
@@ -77,14 +77,17 @@ export default function Conversation() {
             </form>
           </Form>
         </div> */}
-        <form onSubmit={onSubmit} className="grid lg:grid-col-12  ">
+        <form
+          onSubmit={onSubmit}
+          className="grid grid-col-12  lg:flex justify-between "
+        >
           <input
             name="promt"
             placeholder="Enter the Promt"
             onChange={(e) => stepromt(e.target.value)}
-            className="m-3 outline-none  "
+            className="m-3 grow outline-none w-100% "
           />
-          <Button className="bg-gray-900 m-2 rounded text-gray-100 uppercase hover:bg-gray-700 hover:text-white font-medium text-base">
+          <Button className="bg-gray-900 m-2 rounded text-gray-100 uppercase hover:bg-gray-700 hover:text-white font-medium text-base col-span-12">
             Generate
           </Button>
         </form>
